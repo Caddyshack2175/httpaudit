@@ -15,10 +15,10 @@ var uriGenCmd = &cobra.Command{
 	Short: "Generate URIs from directory structure for artifact discovery",
 	Long: `Scan a directory structure and generate corresponding URIs for web testing.
 Perfect for discovering exposed development artifacts, config files, and leftover code.`,
-	Example: `  # Discover artifacts and generate strike targets
+	Example: `  # Discover artifacts on targeted applications.
   httpaudit uri-gen --directory /var/www/html --base-url https://example.com
 
-  # Build target list for hammering
+  # Build target list for an application
   httpaudit uri-gen --directory ./app --base-url https://target.com --output uris.txt
 
   # Generate and immediately test discovered URIs
