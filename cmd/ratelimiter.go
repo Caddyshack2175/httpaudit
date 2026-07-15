@@ -17,13 +17,13 @@ var rateLimiterCmd = &cobra.Command{
 	Short: "Test API rate limiting with controlled concurrent requests",
 	Long: `Send multiple HTTP requests with rate limiting and concurrency control.
 Perfect for testing API rate limits and authentication bypass attempts.`,
-	Example: `  # Hammer an API with rate limiting tests
+	Example: `  # Test an API with rate limiting tests
   httpaudit rate-limiter --request req.txt --total 150 --concurrent 10
 
-  # Strike through Burp Suite proxy
+  # Test through Burp Suite proxy
   httpaudit rate-limiter --request req.txt --total 100 --concurrent 5 --proxy http://127.0.0.1:8080
 
-  # Controlled hammering with delay
+  # Controlled testing with delay
   httpaudit rate-limiter --request req.txt --total 50 --concurrent 3 --timeout 10 --delay 100`,
 	RunE: runRateLimiter,
 }
