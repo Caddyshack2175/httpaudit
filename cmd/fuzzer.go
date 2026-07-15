@@ -29,7 +29,7 @@ Supports file-based wordlists and numeric ranges with optional zero-padding.`,
   # Fast send with filtering
   httpaudit fuzzer --request template.txt --ID 1-10000 --threads 50 --filter-status 200
 
-  # Precision sending (hide errors)
+  # Targeted request sending (hide errors)
   httpaudit fuzzer --request template.txt --ID 1-100 --negative-match "404 Not Found"`,
 	RunE: runFuzzer,
 	// Disable flag parsing to allow unknown flags (placeholders)
