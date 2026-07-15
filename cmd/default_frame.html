@@ -1,0 +1,97 @@
+<html>
+<style>
+body {
+    background: linear-gradient(180deg, rgba(27,32,50,1) 0%, rgba(33,81,128,1) 35%, rgba(105,180,215,1) 100%);
+    font-family: Karla, Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 5rem;
+}
+
+.module {
+    background: #1B2032;
+    border: 3px solid #1B2032;
+    font-family: Arial, sans-serif;
+    /* border-radius: 50px; */
+    margin: 1%;
+    margin-right: 3%;
+    align: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+h1 {
+    padding: 3 1rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    font-family: Karla, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 34px;
+    padding-bottom: 5px;
+}
+
+p {
+    padding: 3 1rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    font-family: Karla, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+pre {
+    font-weight: bold;
+    color: #FFFFFF;
+    font-family: Karla, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    padding-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: #FFFFFF;
+    font-family: Karla, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    padding-bottom: 20px;
+}
+
+iframe {
+    padding: 1rem 1rem;
+    border: 1px solid #000;
+    background: #FFFFFF;
+    display: block;
+    margin: 0 auto;
+}
+
+.stripe {
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-position: left;
+    margin: 1%;
+    height: 40px;
+}
+
+.stripe2 {
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-position: left;
+    margin: 1%;
+    height: 40px;
+}
+</style>
+    <title>Cross Site Framing PoC </title>
+        <center>
+        <div class="module">
+                <h1 class="stripe2"> Cross Site Framing PoC Result </h1>
+                <p>This check was made on: <i><b>{DATE} at {TIME}</b></i></p>
+                <p><b>Target URL:</b> {FRAME}</p>
+                <p> If web content is displayed below, the site or application is <b>VULNERABLE</b> to clickjacking/cross-site framing attacks.</p>
+                <iframe src="{FRAME}" width="1300" height="600" align="middle"></iframe>
+            </div>
+        <br>
+</html>
