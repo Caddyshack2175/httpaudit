@@ -23,13 +23,13 @@ Supports file-based wordlists and numeric ranges with optional zero-padding.`,
 	Example: `  # Hammer endpoints with numeric ranges
   httpaudit fuzzer --request template.txt --USER users.txt --ID 1-1000 --threads 10
 
-  # Strike with zero-padded numbers
+  # Send with zero-padded numbers
   httpaudit fuzzer --request template.txt --DOCID 0001-9999 --threads 20
 
-  # Fast hammering with filtering
+  # Fast send with filtering
   httpaudit fuzzer --request template.txt --ID 1-10000 --threads 50 --filter-status 200
 
-  # Precision strikes (hide errors)
+  # Precision sending (hide errors)
   httpaudit fuzzer --request template.txt --ID 1-100 --negative-match "404 Not Found"`,
 	RunE: runFuzzer,
 	// Disable flag parsing to allow unknown flags (placeholders)
